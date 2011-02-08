@@ -1,0 +1,65 @@
+###########################################################################
+# PirateBox v0.2-1
+# tar.gz that installs PirateBox to a USB Drive for use with the Seagate Dockstar
+# (C) 2011, David Darts, darts@daviddarts.com
+#
+# Released under GPLv2, see http://www.gnu.org/licenses/gpl-2.0.html
+
+PLEASE HELP:
+  - This version is needs testing. Please provide feedback on the PirateBox Forum:
+    http://forum.daviddarts.com  
+
+REQUIREMENTS:
+  - USB 2.0 Drive
+  - Seagate Dockstar
+  - Wireless router that supports WRT firmware (DD-WRT, OpenWrt, etc)
+  - Computer running Linux or Linux live CD (e.g. Ubuntu Live CD) 
+
+INSTALL:
+  - Format USB drive with 3 partitions:
+	ext2 (minimum 500MB) (title: piratebox)
+	swap (minimum 256MB)
+  	FAT32
+  - Mount USB drive on your computer
+  - Download tar.gz file to your computer
+  - Become super user:
+	sudo su
+  - Uncompress into the ext2 partition on the USB drive:  
+	tar xvpfz piratebox_0.2-1.tar.gz -C /media/piratebox/
+  - After copying is complete, exit super user:
+	exit
+  - Navigate to the FAT32 partition on your USB Drive
+	cd /media/share
+  - Create "piratebox" directory
+	mkdir piratebox  
+  - Navigate to piratebox directory
+	cd /media/share/piratebox
+  - Add the following three files to the piratebox directory
+	wget http://daviddarts.com/piratebox/piratebox-logo.png
+	wget http://daviddarts.com/piratebox/.READ.ME.htm
+	wget http://daviddarts.com/piratebox/.BACK.TO.MENU.htm
+  - Unmount USB Drive (Important: allow the system to "write" any extra data 
+    to the drive first before unplugging (be patient!)
+ 
+USAGE:
+ - Connect USB Drive to Dockstar
+ - Connect your Dockstar to your router gateway and plug the power in to 
+   start the system
+ - Note: this version of the PirateBox is designed to be paired with a 
+   DD-WRT router which should be configured with HTTP Redirect to redirect 
+   all requests to the menu webpage of the Dockstar.
+   See http://wiki.daviddarts.com/PirateBox for more information	
+ - SSH into the system:
+	ssh root@piratebox (or ssh root@IP_Address_of_Dockstar) 
+ - Default password is: root
+ - Change root password:
+	passwd
+ - Open a browser and navigate to a webpage - you will redirected to
+   the PirateBox menu page
+ - Begin sharing files!
+ 
+REFERENCES:
+  - The PirateBox project:
+    http://wiki.daviddarts.com/PirateBox_DIY
+  - The PirateBox forum:
+    http://forum.daviddarts.com   
