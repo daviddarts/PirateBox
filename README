@@ -16,11 +16,26 @@ REQUIREMENTS:
   - Wireless router that supports WRT firmware (DD-WRT, OpenWrt, etc)
   - Computer running Linux or Linux live CD (e.g. Ubuntu Live CD) 
 
+PRE-INSTALL:
+  - If you are using a "fresh" Seagate Dockstar, you should first use Jeff Doozan's script 
+    to install an unlocked bootloader on your device that supports multiple boot options,
+    including booting directly from a USB drive.
+  - First remove any drives from the Dockstar and connect it to your router/gateway and 
+    find its IP Address
+  - SSH into the device:
+        ssh root@IP_Address_Of_Dockstar
+    NOTE: the password is 'stxadmin' on Seagate branded devices and 'ceadmin' on Pogoplug devices
+  - Install the unlocked bootloader:
+        cd /tmp
+        wget http://jeff.doozan.com/debian/uboot/install_uboot_mtd0.sh
+        chmod +x install_uboot_mtd0.sh
+        ./install_uboot_mtd0.sh
+
 INSTALL:
   - Format USB drive with 3 partitions:
 	ext2 (minimum 500MB) (title: piratebox)
-	swap (minimum 256MB)
-  	FAT32
+	swap (minimum 256MB) (no title)
+  	FAT32 (title: share)
   - Mount USB drive on your computer
   - Download tar.gz file to your computer
         wget --no-check-certificate https://github.com/downloads/daviddarts/PirateBox/piratebox_0.2-1.tar.gz
@@ -65,3 +80,5 @@ REFERENCES:
     http://wiki.daviddarts.com/PirateBox_DIY
   - The PirateBox forum:
     http://forum.daviddarts.com   
+  - Jeff Doozan's "Unlocking your Dockstar, GoFlex, or Pogoplug" site
+    http://jeff.doozan.com/debian
