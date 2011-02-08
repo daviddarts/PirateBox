@@ -1,13 +1,13 @@
 ###########################################################################
 # PirateBox v0.2-1
-# tar.gz that installs specially configured version of Debian Squeeze with PirateBox to 
-# a USB Drive for use with the Seagate Dockstar
+# tar.gz that installs Debian Squeeze pre-configured with PirateBox to a USB 2.0 drive 
+# for use with the Seagate Dockstar
 # (C) 2011, David Darts, darts@daviddarts.com
 #
 # Released under GPLv2, see http://www.gnu.org/licenses/gpl-2.0.html
 
 PLEASE HELP:
-  - This version is needs testing. Please provide feedback on the PirateBox Forum:
+  - This version needs testing. Please provide feedback on the PirateBox Forum:
     http://forum.daviddarts.com  
 
 REQUIREMENTS:
@@ -17,9 +17,13 @@ REQUIREMENTS:
   - Computer running Linux or Linux live CD (e.g. Ubuntu Live CD) 
 
 PRE-INSTALL:
-  - If you are using a "fresh" Seagate Dockstar, you should first use Jeff Doozan's script 
-    to install an unlocked bootloader on your device that supports multiple boot options,
-    including booting directly from a USB drive.
+  - NOTE: This package has only been tested on a Dockstar that was previously 
+    modified using Jeff Doozan's script to install Debian on a USB drive connected to 
+    the Dockstar. http://jeff.doozan.com/debian/ 
+    It has NOT been tested on a "fresh" Dockstar with the original uboot loader still installed. 
+    If you are using a "fresh" Dockstar, it should be possible to use his uboot script to install 
+    an unlocked bootloader on your device that supports multiple boot options,
+    including booting directly from a USB drive. http://jeff.doozan.com/debian/uboot/
   - First remove any drives from the Dockstar and connect it to your router/gateway and 
     find its IP Address
   - SSH into the device:
