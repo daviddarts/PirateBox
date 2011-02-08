@@ -27,7 +27,7 @@ INSTALL:
   - Become super user:
 	sudo su
   - Uncompress into the ext2 partition on the USB drive:  
-	tar xvpfz piratebox_0.2-1.tar.gz -C /media/piratebox
+	tar xvpfz piratebox_0.2-1.tar.gz --strip-components 1 -C /media/piratebox
   - After copying is complete, exit super user:
 	exit
   - Navigate to the FAT32 partition on your USB Drive
