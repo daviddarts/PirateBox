@@ -23,6 +23,7 @@ INSTALL:
   	FAT32
   - Mount USB drive on your computer
   - Download tar.gz file to your computer
+        wget --no-check-certificate https://github.com/downloads/daviddarts/PirateBox/piratebox_0.2-1.tar.gz
   - Become super user:
 	sudo su
   - Uncompress into the ext2 partition on the USB drive:  
