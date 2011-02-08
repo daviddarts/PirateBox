@@ -1,6 +1,7 @@
 ###########################################################################
 # PirateBox v0.2-1
-# tar.gz that installs PirateBox to a USB Drive for use with the Seagate Dockstar
+# tar.gz that installs specially configured version of Debian Squeeze with PirateBox to 
+# a USB Drive for use with the Seagate Dockstar
 # (C) 2011, David Darts, darts@daviddarts.com
 #
 # Released under GPLv2, see http://www.gnu.org/licenses/gpl-2.0.html
