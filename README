@@ -37,9 +37,9 @@ PRE-INSTALL:
 
 INSTALL:
   - Format USB drive with 3 partitions:
-	ext2 (minimum 500MB) (title: piratebox)
-	swap (minimum 256MB) (no title)
-  	FAT32 (title: share)
+	ext2 (minimum 500MB) (label: piratebox)
+	swap (minimum 256MB) (no label)
+  	FAT32 (label: share)
   - Mount USB drive on your computer
   - Download tar.gz file to your computer
         wget --no-check-certificate https://github.com/downloads/daviddarts/PirateBox/piratebox_0.2-1.tar.gz
