@@ -9,7 +9,8 @@
 OVERVIEW:
     This version of PirateBox comes with a shoutbox interface that facilitates anonymous chat. 
     Like the original version, it also includes a simple file sharing interface. 
-    NOTE: the shoutbox files are stored in the /chat directory
+    NOTE: the shoutbox is based on JWC's PyShoutOut  http://jwcxz.com/projects/pyshoutout/ 
+    The shoutbox files are stored in the /chat directory
     
 PLEASE HELP:
   - This version needs testing. Please provide feedback on the PirateBox Forum:
@@ -60,26 +61,20 @@ INSTALL:
 	mkdir piratebox  
   - Navigate to piratebox directory
 	cd /media/share/piratebox
-  - Add the following three files to the piratebox directory
+  - Add the following two files to the piratebox directory
 	wget http://daviddarts.com/piratebox/.READ.ME.htm
 	wget http://daviddarts.com/piratebox/.BACK.TO.MENU.htm
-  - Unmount USB Drive (Important: allow the system to "write" any extra data 
+  - Unmount USB Drive - Important: allow the system to "write" any extra data 
     to the drive first before unplugging (be patient!)
  
 USAGE:
  - Connect USB Drive to Dockstar and the Dockstart to your 
    DD-WRT router - see DIY Tutorial 2 on the wiki for more info: 
    http://wiki.daviddarts.com/PirateBox_DIY
- - SSH into the system (default password is root)
-	ssh root@piratebox (or ssh root@IP_Address_of_Dockstar) 
- - Set date (the Dockstar does not a have battery-backed Real-time clock)
-        date --set 2011-02-17 
-        date --set 21:08:00
- - Change root password:
-	passwd
- - Open a web browser and navigate to a web page - you should be redirected to 
-   the PirateBox menu page. Begin chatting and/or sharing files. 
- 
+  - Open a web browser and navigate to any web page - you should be redirected to 
+   the main PirateBox menu page. Begin chatting and/or sharing files.
+   NOTE: The hostname for the system is piratebox and the default password is root
+
 REFERENCES:
   - The PirateBox project:
     http://wiki.daviddarts.com/PirateBox_DIY
@@ -87,5 +82,7 @@ REFERENCES:
     http://forum.daviddarts.com   
   - Jeff Doozan's "Unlocking your Dockstar, GoFlex, or Pogoplug" site
     http://jeff.doozan.com/debian
-  - Debian Linux:
+ - JWC's PyShoutOut
+   http://jwcxz.com/projects/pyshoutout/ 
+ - Debian Linux:
     http://www.debian.org
