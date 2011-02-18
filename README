@@ -1,11 +1,16 @@
 ###########################################################################
-# PirateBox v0.2-1
+# PirateBox v0.2-4 (with Chat)
 # tar.gz that installs Debian Squeeze pre-configured with PirateBox to a USB 2.0 drive 
 # for use with the Seagate Dockstar
 # (C) 2011, David Darts, darts@daviddarts.com
 #
 # Released under GPLv2, see http://www.gnu.org/licenses/gpl-2.0.html
 
+OVERVIEW:
+    This version of PirateBox comes with a shoutbox interface that facilitates anonymous chat. 
+    Like the original version, it also includes a simple file sharing interface. 
+    NOTE: the shoutbox files are stored in the /chat directory
+    
 PLEASE HELP:
   - This version needs testing. Please provide feedback on the PirateBox Forum:
     http://forum.daviddarts.com  
@@ -21,7 +26,7 @@ PRE-INSTALL:
     modified using Jeff Doozan's script to install Debian on a USB drive connected to 
     the Dockstar. http://jeff.doozan.com/debian/ 
     It has NOT been tested on a "fresh" Dockstar with the original uboot loader still installed. 
-    If you are using a "fresh" Dockstar, it should be possible to use his uboot script to install 
+    If you are using a "fresh" Dockstar, it "should" be possible to use Jeff's uboot script to install 
     an unlocked bootloader on your device that supports multiple boot options,
     including booting directly from a USB drive. http://jeff.doozan.com/debian/uboot/
   - First remove any drives from the Dockstar and connect it to your router/gateway and 
@@ -42,11 +47,11 @@ INSTALL:
   	FAT32 (label: share)
   - Mount USB drive on your computer
   - Download tar.gz file to your computer
-        wget --no-check-certificate https://github.com/downloads/daviddarts/PirateBox/piratebox_0.2-1.tar.gz
+        wget --no-check-certificate https://github.com/downloads/daviddarts/PirateBox/piratebox_0.2-4.tar.gz
   - Become super user:
 	sudo su
   - Uncompress into the ext2 partition on the USB drive:  
-	tar xvpfz piratebox_0.2-1.tar.gz --strip-components 1 -C /media/piratebox
+	tar xvpfz piratebox_0.2-4.tar.gz --strip-components 1 -C /media/piratebox
   - After copying is complete, exit super user:
 	exit
   - Navigate to the FAT32 partition on your USB Drive
@@ -56,28 +61,24 @@ INSTALL:
   - Navigate to piratebox directory
 	cd /media/share/piratebox
   - Add the following three files to the piratebox directory
-	wget http://daviddarts.com/piratebox/piratebox-logo.png
 	wget http://daviddarts.com/piratebox/.READ.ME.htm
 	wget http://daviddarts.com/piratebox/.BACK.TO.MENU.htm
   - Unmount USB Drive (Important: allow the system to "write" any extra data 
     to the drive first before unplugging (be patient!)
  
 USAGE:
- - Connect USB Drive to Dockstar
- - Connect your Dockstar to your router gateway and plug the power in to 
-   start the system
- - Note: this version of the PirateBox is designed to be paired with a 
-   DD-WRT router which should be configured with HTTP Redirect to redirect 
-   all requests to the menu webpage of the Dockstar.
-   See http://wiki.daviddarts.com/PirateBox for more information	
- - SSH into the system:
+ - Connect USB Drive to Dockstar and the Dockstart to your 
+   DD-WRT router - see DIY Tutorial 2 on the wiki for more info: 
+   http://wiki.daviddarts.com/PirateBox_DIY
+ - SSH into the system (default password is root)
 	ssh root@piratebox (or ssh root@IP_Address_of_Dockstar) 
- - Default password is: root
+ - Set date (the Dockstar does not a have battery-backed Real-time clock)
+        date --set 2011-02-17 
+        date --set 21:08:00
  - Change root password:
 	passwd
- - Open a browser and navigate to a webpage - you will redirected to
-   the PirateBox menu page
- - Begin sharing files!
+ - Open a web browser and navigate to a web page - you should be redirected to 
+   the PirateBox menu page. Begin chatting and/or sharing files. 
  
 REFERENCES:
   - The PirateBox project:
