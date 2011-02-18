@@ -61,9 +61,10 @@ INSTALL:
 	mkdir piratebox  
   - Navigate to piratebox directory
 	cd /media/share/piratebox
-  - Add the following two files to the piratebox directory
+  - Add the following three files to the piratebox directory
 	wget http://daviddarts.com/piratebox/.READ.ME.htm
 	wget http://daviddarts.com/piratebox/.BACK.TO.MENU.htm
+        wget http://daviddarts.com/piratebox/piratebox-logo.png
   - Unmount USB Drive - Important: allow the system to "write" any extra data 
     to the drive first before unplugging (be patient!)
  
