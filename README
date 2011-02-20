@@ -2,7 +2,7 @@
 # PirateBox v0.2-4 (with Chat)
 # tar.gz that installs Debian Squeeze pre-configured with PirateBox to a USB 2.0 drive 
 # for use with the Seagate Dockstar
-# (C) 2011, David Darts, darts@daviddarts.com
+# (C) 2011, David Darts, daviddarts@gmail.com
 #
 # Released under GPLv2, see http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,7 +34,8 @@ PRE-INSTALL:
     find its IP Address
   - SSH into the device:
         ssh root@IP_Address_Of_Dockstar
-    NOTE: the password is 'stxadmin' on Seagate branded devices and 'ceadmin' on Pogoplug devices
+    NOTE: the Dockstar password is 'stxadmin' on Seagate branded devices and 'ceadmin' 
+    on Pogoplug devices
   - Install the unlocked bootloader:
         cd /tmp
         wget http://jeff.doozan.com/debian/uboot/install_uboot_mtd0.sh
