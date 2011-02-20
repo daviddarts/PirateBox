@@ -22,7 +22,7 @@ REQUIREMENTS:
   - Wireless router that supports WRT firmware (DD-WRT, OpenWrt, etc)
   - Computer running Linux or Linux live CD (e.g. Ubuntu Live CD) 
 
-PRE-INSTALL:
+PRE-INSTALL (THIS STEP ONLY NEEDED FOR "FRESH" DOCKSTARS):
   - NOTE: This package has only been tested on a Dockstar that was previously 
     modified using Jeff Doozan's script to install Debian on a USB drive connected to 
     the Dockstar. http://jeff.doozan.com/debian/ 
@@ -47,6 +47,12 @@ INSTALL:
 	ext2 (minimum 500MB) (label: piratebox)
 	swap (minimum 256MB) (no label)
   	FAT32 (label: share)
+    NOTE: I recommend using GParted
+    http://gparted.sourceforge.net
+  - On Ubuntu, you can install with:
+       sudo apt-get install gparted      
+  - You can create and run a live CD or USB version of GParted. You can also use a Live Ubuntu CD 
+    which comes with GParted pre-installed.
   - Mount USB drive on your computer
   - Download tar.gz file to your computer
         wget --no-check-certificate https://github.com/downloads/daviddarts/PirateBox/piratebox_0.2-4.tar.gz
