@@ -62,17 +62,15 @@ INSTALL:
 	tar xvpfz piratebox_0.2-4.tar.gz --strip-components 1 -C /media/piratebox
   - After copying is complete, exit super user:
 	exit
-  - Navigate to the FAT32 partition on your USB Drive
-	cd /media/share
-  - Create "piratebox" directory
-	mkdir piratebox  
+  - Create "piratebox" directory on the /media/share (FAT32) partition
+	mkdir /media/share/piratebox  
   - Navigate to piratebox directory
 	cd /media/share/piratebox
   - Add the following three files to the piratebox directory
 	wget http://daviddarts.com/piratebox/.READ.ME.htm
 	wget http://daviddarts.com/piratebox/.BACK.TO.MENU.htm
         wget http://daviddarts.com/piratebox/piratebox-logo.png
-  - Unmount USB Drive - Important: allow the system to "write" any extra data 
+  - Unmount USB Drive using your file manager - Important: allow the system to "write" any extra data 
     to the drive first before unplugging (be patient!)
  
 USAGE:
