@@ -83,9 +83,12 @@ USAGE:
 
 REFERENCES:
   - The PirateBox project:
+    http://wiki.daviddarts.com/PirateBox
     http://wiki.daviddarts.com/PirateBox_DIY
   - The PirateBox forum:
     http://forum.daviddarts.com   
+  - mkPirateBox:
+    https://github.com/cr/mkPirateBox
   - Jeff Doozan's "Unlocking your Dockstar, GoFlex, or Pogoplug" site
     http://jeff.doozan.com/debian
  - JWC's PyShoutOut
