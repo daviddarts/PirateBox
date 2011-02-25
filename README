@@ -60,7 +60,9 @@ INSTALL:
 	sudo su
   - Uncompress into the ext2 partition on the USB drive:  
 	tar xvpfz piratebox_0.2-4.tar.gz --strip-components 1 -C /media/piratebox
-  - After copying is complete, exit super user:
+  - Comment out the entries on the /etc/udev/rules.d/70-persistent-net.rules file:
+        nano /media/piratebox/etc/udev/rules.d/70-persistent-net.rules
+  - Exit super user:
 	exit
   - Create "piratebox" directory on the /media/share (FAT32) partition
 	mkdir /media/share/piratebox  
