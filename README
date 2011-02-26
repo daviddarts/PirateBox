@@ -75,12 +75,14 @@ INSTALL:
     to the drive first before unplugging (be patient!)
  
 USAGE:
- - Connect USB Drive to Dockstar and the Dockstart to your 
-   DD-WRT router - see DIY Tutorial 2 on the wiki for more info: 
+ - Connect USB Drive to the back port of the Dockstar (beside the ethernet port) and connect the 
+    Dockstart to your DD-WRT router - see DIY Tutorial 2 on the wiki for more info: 
    http://wiki.daviddarts.com/PirateBox_DIY
   - Open a web browser and navigate to any web page - you should be redirected to 
    the main PirateBox menu page. Begin chatting and/or sharing files.
    NOTE: The hostname for the system is piratebox and the default password is root
+   NOTE: If you would later like to use this USB disk image on another device, be sure to comment out
+   the lines in the /etc/udev/rules.d/70-persistent-net.rules file.
 
 REFERENCES:
   - The PirateBox project:
