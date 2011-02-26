@@ -1,5 +1,5 @@
 ###########################################################################
-# PirateBox v0.2-4 (with Chat)
+# PirateBox v0.3-1 (with Chat)
 # tar.gz that installs Debian Squeeze pre-configured with PirateBox to a USB 2.0 drive 
 # for use with the Seagate Dockstar
 # (C) 2011, David Darts, daviddarts@gmail.com
@@ -54,24 +54,23 @@ INSTALL:
   - You can create and run a live CD or USB version of GParted. You can also use a Live Ubuntu CD 
     which comes with GParted pre-installed.
   - Mount USB drive on your computer
-  - Download tar.gz file to your computer
-        wget --no-check-certificate https://github.com/downloads/daviddarts/PirateBox/piratebox_0.2-4.tar.gz
+  - Download the tar.gz disk image to your computer
+        wget --no-check-certificate https://github.com/downloads/daviddarts/PirateBox/piratebox_0.3-1.tar.gz
   - Become super user:
 	sudo su
   - Uncompress into the ext2 partition on the USB drive:  
-	tar xvpfz piratebox_0.2-4.tar.gz --strip-components 1 -C /media/piratebox
-  - Comment out the entries on the /etc/udev/rules.d/70-persistent-net.rules file:
-        nano /media/piratebox/etc/udev/rules.d/70-persistent-net.rules
+	tar xvpfz piratebox_0.3-1.tar.gz --strip-components 1 -C /media/piratebox
   - Exit super user:
 	exit
   - Create "piratebox" directory on the /media/share (FAT32) partition
 	mkdir /media/share/piratebox  
   - Navigate to piratebox directory
 	cd /media/share/piratebox
-  - Add the following three files to the piratebox directory
+  - Add the following four files to the piratebox directory
 	wget http://daviddarts.com/piratebox/.READ.ME.htm
 	wget http://daviddarts.com/piratebox/.BACK.TO.MENU.htm
-        wget http://daviddarts.com/piratebox/piratebox-logo.png
+        wget http://daviddarts.com/piratebox/piratebox-logo-small.png
+        wget http://stackp.online.fr/wp-content/uploads/webserver.py
   - Unmount USB Drive using your file manager - Important: allow the system to "write" any extra data 
     to the drive first before unplugging (be patient!)
  
@@ -93,6 +92,8 @@ REFERENCES:
     https://github.com/cr/mkPirateBox
   - Jeff Doozan's "Unlocking your Dockstar, GoFlex, or Pogoplug" site
     http://jeff.doozan.com/debian
+ - Pierre Duquesne's droopy script
+   http://stackp.online.fr/?p=28
  - JWC's PyShoutOut
    http://jwcxz.com/projects/pyshoutout/ 
  - Debian Linux:
