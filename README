@@ -1,10 +1,16 @@
 ###########################################################################
-# PirateBox v0.3-1 (with Chat)
+# PirateBox v0.3-2 (with Shoutbox)
 # tar.gz that installs Debian Squeeze pre-configured with PirateBox to a USB 2.0 drive 
 # for use with the Seagate Dockstar
 # (C) 2011, David Darts, daviddarts@gmail.com
 #
 # Released under GPLv2, see http://www.gnu.org/licenses/gpl-2.0.html
+#   Changelog
+#     20110227 * Moved /chat directory to /opt/piratebox/chat 
+#                    * Added download links in README for favicon.ico and piratebox-logo.png  
+#     20110226 * Replaced Python simpleHTTPserver with Pierre Duquesne's better minimal 
+#                      web server on port 8001 to support simultaneous downloading
+#                    * Moved droopy back to port 80 and moved the shoutbox cgi server to port 8002   
 
 OVERVIEW:
     This version of PirateBox comes with a shoutbox interface that facilitates anonymous chat. 
@@ -18,7 +24,7 @@ PLEASE HELP:
 
 REQUIREMENTS:
   - USB 2.0 Drive
-  - Seagate Dockstar
+  - Seagate Dockstar (or GoFlex Net or Pogoplug device)
   - Wireless router that supports WRT firmware (DD-WRT, OpenWrt, etc)
   - Computer running Linux or Linux live CD (e.g. Ubuntu Live CD) 
 
