@@ -28,10 +28,11 @@ REQUIREMENTS:
   - Wireless router that supports WRT firmware (DD-WRT, OpenWrt, etc)
   - Computer running Linux or Linux live CD (e.g. Ubuntu Live CD) 
 
-PRE-INSTALL (THIS STEP ONLY NEEDED FOR "FRESH" DOCKSTARS):
+PRE-INSTALL (ONLY NEEDED FOR "FRESH" DOCKSTAR/GOFLEX/POGOPLUG DEVICES):
   - NOTE: You must first use Jeff Doozan's script http://jeff.doozan.com/debian/ to 
-    install Debian on a USB drive connected to the Dockstar before proceeding. Otherwise, 
-    the PirateBox disk image will not work. Once Jeff's script has successfully completed, 
+    install Debian on a USB drive connected to the Dockstar/GoFlex/Pogoplug before proceeding. This
+    will install an updated bootloader which supports Debian and other distros. This is required for 
+    the PirateBox disk image to boot. Once Jeff's script has successfully completed the install, 
     you can unplug the Dockstar and reformat the USB drive as outlined below.
 
 INSTALL:
