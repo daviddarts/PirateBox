@@ -29,24 +29,10 @@ REQUIREMENTS:
   - Computer running Linux or Linux live CD (e.g. Ubuntu Live CD) 
 
 PRE-INSTALL (THIS STEP ONLY NEEDED FOR "FRESH" DOCKSTARS):
-  - NOTE: This package has only been tested on a Dockstar that was previously 
-    modified using Jeff Doozan's script to install Debian on a USB drive connected to 
-    the Dockstar. http://jeff.doozan.com/debian/ 
-    It has NOT been tested on a "fresh" Dockstar with the original uboot loader still installed. 
-    If you are using a "fresh" Dockstar, it "should" be possible to use Jeff's uboot script to install 
-    an unlocked bootloader on your device that supports multiple boot options,
-    including booting directly from a USB drive. http://jeff.doozan.com/debian/uboot/
-  - First remove any drives from the Dockstar and connect it to your router/gateway and 
-    find its IP Address
-  - SSH into the device:
-        ssh root@IP_Address_Of_Dockstar
-    NOTE: the Dockstar password is 'stxadmin' on Seagate branded devices and 'ceadmin' 
-    on Pogoplug devices
-  - Install the unlocked bootloader:
-        cd /tmp
-        wget http://jeff.doozan.com/debian/uboot/install_uboot_mtd0.sh
-        chmod +x install_uboot_mtd0.sh
-        ./install_uboot_mtd0.sh
+  - NOTE: You must first use Jeff Doozan's script http://jeff.doozan.com/debian/ to 
+    install Debian on a USB drive connected to the Dockstar before proceeding. Otherwise, 
+    the PirateBox disk image will not work. Once Jeff's script has successfully completed, 
+    you can unplug the Dockstar and reformat the USB drive as outlined below.
 
 INSTALL:
   - Format USB drive with 3 partitions:
