@@ -1,7 +1,7 @@
 ###########################################################################
 # PirateBox v0.3-2 (with Shoutbox)
 # tar.gz that installs Debian Squeeze pre-configured with PirateBox to a USB 2.0 drive 
-# for use with the Seagate Dockstar
+# for use with the Seagate Dockstar, GoFlex Net, or Pogoplug
 # (C) 2011, David Darts, daviddarts@gmail.com
 #
 # Released under GPLv2, see http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,11 +29,15 @@ REQUIREMENTS:
   - Computer running Linux or Linux live CD (e.g. Ubuntu Live CD) 
 
 PRE-INSTALL (ONLY NEEDED FOR "FRESH" DOCKSTAR/GOFLEX/POGOPLUG DEVICES):
-  - NOTE: You must first use Jeff Doozan's script http://jeff.doozan.com/debian/ to 
-    install Debian on a USB drive connected to the Dockstar/GoFlex/Pogoplug before proceeding. This
-    will install an updated bootloader which supports Debian and other distros. This is required for 
-    the PirateBox disk image to boot. Once Jeff's script has successfully completed the install, 
-    you can unplug the Dockstar and reformat the USB drive as outlined below.
+  - NOTE: If you are you using a brand new Dockstar/Go Flex/Pogoplug device, you must first 
+    update the locked uBoot boot loader with a new ulocked version that provides support for 
+    booting from USB drives. Jeff Doozan has created an easy to use script for this.
+    The login is root and default password is: stxadmin (ceadmin for Pogoplugs) 
+    http://jeff.doozan.com/debian/uboot/ 
+
+    As an alternative, you can use another script by Jeff Doozan's http://jeff.doozan.com/debian/
+    to install Debian on a USB drive connected to the Dockstar/GoFlex/Pogoplug. This
+    will install an updated uBoot bootloader which supports booting from USB devices.
 
 INSTALL:
   - Format USB drive with 3 partitions:
@@ -87,7 +91,7 @@ REFERENCES:
     http://forum.daviddarts.com   
   - mkPirateBox:
     https://github.com/cr/mkPirateBox
-  - Jeff Doozan's "Unlocking your Dockstar, GoFlex, or Pogoplug" site
+  - Jeff Doozan's "Unlocking your Dockstar, GoFlex, or Pogoplug"
     http://jeff.doozan.com/debian
  - Pierre Duquesne's droopy script
    http://stackp.online.fr/?p=28
