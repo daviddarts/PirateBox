@@ -1,11 +1,12 @@
 ###########################################################################
-# PirateBox v0.3-3 (with Shoutbox)
+# PirateBox v0.3-4 (with Shoutbox)
 # tar.gz that installs Debian Squeeze pre-configured with PirateBox to a USB 2.0 drive 
 # for use with the Seagate Dockstar, GoFlex Net, or Pogoplug
 # (C) 2011, David Darts, daviddarts@gmail.com
 #
 # Released under GPLv2, see http://www.gnu.org/licenses/gpl-2.0.html
 #   Changelog
+#     20120212 * Commented out all lines in the /etc/udev/rules.d/70-persistent-net.rules file.
 #     20110306 * Added avahi package to publish the piratebox.local hostname on the local LAN. 
 #                      This provides Linux and OS X client support for use with non DD-WRT routers.                       
 #                      Updated all URLs from pirate.box to piratebox.local 
