@@ -56,11 +56,11 @@ INSTALL:
     which comes with GParted pre-installed.
   - Mount USB drive on your computer
   - Download the tar.gz disk image to your computer
-        wget --no-check-certificate https://github.com/downloads/daviddarts/PirateBox/piratebox_0.3-3.tar.gz
+        wget --no-check-certificate https://github.com/downloads/daviddarts/PirateBox/piratebox_0.3-4.tar.gz
   - Become super user:
 	sudo su
   - Uncompress into the ext2 partition on the USB drive:  
-	tar xvpfz piratebox_0.3-2.tar.gz --strip-components 1 -C /media/piratebox
+	tar xvpfz piratebox_0.3-4.tar.gz --strip-components 1 -C /media/piratebox
   - Exit super user:
 	exit
   - Create "piratebox" directory on the /media/share (FAT32) partition
