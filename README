@@ -1,105 +1,13 @@
 ###########################################################################
-# PirateBox v0.3-4 (with Shoutbox)
-# tar.gz that installs Debian Squeeze pre-configured with PirateBox to a USB 2.0 drive 
-# for use with the Seagate Dockstar, GoFlex Net, or Pogoplug
+# PirateBox
 # (C) 2011, David Darts, daviddarts@gmail.com
-#
 # Released under GPLv2, see http://www.gnu.org/licenses/gpl-2.0.html
-#   Changelog
-#     20120212 * Commented out all lines in the /etc/udev/rules.d/70-persistent-net.rules file.
-#     20110306 * Added avahi package to publish the piratebox.local hostname on the local LAN. 
-#                      This provides Linux and OS X client support for use with non DD-WRT routers.                       
-#                      Updated all URLs from pirate.box to piratebox.local 
-#     20110227 * Moved /chat directory to /opt/piratebox/chat 
-#                    * Added download links in README for favicon.ico and piratebox-logo.png  
-#     20110226 * Replaced Python simpleHTTPserver with Pierre Duquesne's better minimal 
-#                      web server on port 8001 to support simultaneous downloading
-#                    * Moved droopy back to port 80 and moved the shoutbox cgi server to port 8002   
 
-OVERVIEW:
-    This version of PirateBox comes with a shoutbox interface that facilitates anonymous chat. 
-    Like the original version, it also includes a simple file sharing interface. 
-    NOTE: the shoutbox is based on JWC's PyShoutOut  http://jwcxz.com/projects/pyshoutout/ 
-    The shoutbox files are stored in the /chat directory
-    
-PLEASE HELP:
-  - This version needs testing. Please provide feedback on the PirateBox Forum:
-    http://forum.daviddarts.com  
+PirateBox is a self-contained mobile communication and file sharing device. Simply turn it on to transform any space into a free and open communications and file sharing network. 
 
-REQUIREMENTS:
-  - USB 2.0 Drive
-  - Seagate Dockstar (or GoFlex Net or Pogoplug device)
-  - Wireless router that supports WRT firmware (DD-WRT, OpenWrt, etc)
-  - Computer running Linux or Linux live CD (e.g. Ubuntu Live CD) 
+http://wiki.daviddarts.com/PirateBox
+http://forum.daviddarts.com
+http://wiki.daviddarts.com/PirateBox_DIY_OpenWrt
+http://piratebox.aod-rpg.de/dokuwiki/doku.php
+http://wiki.daviddarts.com/Press
 
-PRE-INSTALL (ONLY NEEDED FOR "FRESH" DOCKSTAR/GOFLEX/POGOPLUG DEVICES):
-  - NOTE: If you are you using a brand new Dockstar/Go Flex/Pogoplug device, you must first 
-    update the locked uBoot boot loader with a new ulocked version that provides support for 
-    booting from USB drives. Jeff Doozan has created an easy to use script for this.
-    The login is root and default password is: stxadmin (ceadmin for Pogoplugs) 
-    http://jeff.doozan.com/debian/uboot/ 
-
-    As an alternative, you can use another script by Jeff Doozan's http://jeff.doozan.com/debian/
-    to install Debian on a USB drive connected to the Dockstar/GoFlex/Pogoplug. This
-    will install an updated uBoot bootloader which supports booting from USB devices.
-
-INSTALL:
-  - Format USB drive with 3 partitions:
-	ext2 (minimum 500MB) (label: piratebox)
-	swap (minimum 256MB) (no label)
-  	FAT32 (label: share)
-    NOTE: I recommend using GParted
-    http://gparted.sourceforge.net
-  - On Ubuntu, you can install with:
-       sudo apt-get install gparted      
-  - You can create and run a live CD or USB version of GParted. You can also use a Live Ubuntu CD 
-    which comes with GParted pre-installed.
-  - Mount USB drive on your computer
-  - Download the tar.gz disk image to your computer
-        wget --no-check-certificate https://github.com/downloads/daviddarts/PirateBox/piratebox_0.3-4.tar.gz
-  - Become super user:
-	sudo su
-  - Uncompress into the ext2 partition on the USB drive:  
-	tar xvpfz piratebox_0.3-4.tar.gz --strip-components 1 -C /media/piratebox
-  - Exit super user:
-	exit
-  - Create "piratebox" directory on the /media/share (FAT32) partition
-	mkdir /media/share/piratebox  
-  - Navigate to piratebox directory
-	cd /media/share/piratebox
-  - Add the following six files to the piratebox directory
-	wget http://daviddarts.com/piratebox/.READ.ME.htm
-	wget http://daviddarts.com/piratebox/.BACK.TO.MENU.htm
-        wget http://daviddarts.com/piratebox/piratebox-logo-small.png
-        wget http://daviddarts.com/piratebox/piratebox-logo.png
-        wget http://daviddarts.com/piratebox/favicon.ico
-        wget http://stackp.online.fr/wp-content/uploads/webserver.py
-  - Unmount USB Drive using your file manager - Important: allow the system to "write" any extra data 
-    to the drive first before unplugging (be patient!)
- 
-USAGE:
- - Connect USB Drive to the back port of the Dockstar (beside the ethernet port) and connect the 
-    Dockstart to your DD-WRT router - see DIY Tutorial 2 on the wiki for more info: 
-   http://wiki.daviddarts.com/PirateBox_DIY
-  - Open a web browser and navigate to any web page - you should be redirected to 
-   the main PirateBox menu page. Begin chatting and/or sharing files.
-   NOTE: The hostname for the system is piratebox and the default password is root
-   NOTE: If you would later like to use this USB disk image on another device, be sure to comment out
-   the lines in the /etc/udev/rules.d/70-persistent-net.rules file.
-
-REFERENCES:
-  - The PirateBox project:
-    http://wiki.daviddarts.com/PirateBox
-    http://wiki.daviddarts.com/PirateBox_DIY
-  - The PirateBox forum:
-    http://forum.daviddarts.com   
-  - mkPirateBox:
-    https://github.com/cr/mkPirateBox
-  - Jeff Doozan's "Unlocking your Dockstar, GoFlex, or Pogoplug"
-    http://jeff.doozan.com/debian
- - Pierre Duquesne's droopy script
-   http://stackp.online.fr/?p=28
- - JWC's PyShoutOut
-   http://jwcxz.com/projects/pyshoutout/ 
- - Debian Linux:
-    http://www.debian.org
