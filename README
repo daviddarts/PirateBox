@@ -1,13 +1,14 @@
 ###########################################################################
 # PirateBox
-# (C) 2011, David Darts, daviddarts@gmail.com
+# (C) 2011-2014, David Darts, daviddarts@gmail.com
 # Released under GPLv2, see http://www.gnu.org/licenses/gpl-2.0.html
 
 PirateBox is a self-contained mobile communication and file sharing device. Simply turn it on to transform any space into a free and open communications and file sharing network. 
 
-http://wiki.daviddarts.com/PirateBox
-http://forum.daviddarts.com
-http://wiki.daviddarts.com/PirateBox_DIY_OpenWrt
+http://www.piratebox.cc
+http://forum.piratebox.cc
+http://piratebox.cc/openwrt:diy
 http://piratebox.aod-rpg.de/dokuwiki/doku.php
-http://wiki.daviddarts.com/Press
+http://www.piratebox.cc/press
 
+see also: https://github.com/PirateBox-Dev
